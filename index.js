@@ -13,7 +13,6 @@
  *
  */
 (function (root, factory) {
-  var root = this;
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
     define(['react-dom'], factory);
@@ -28,6 +27,8 @@
   }
 }(this, function (ReactDOM) {
   "use strict";
+  //Window object for late use
+  var root = this;
 
   // Use a parallel array because we can't use
   // objects as keys, they get toString-coerced
